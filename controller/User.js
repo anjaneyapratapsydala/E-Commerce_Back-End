@@ -1,4 +1,5 @@
 const {User} = require('../model/User')
+const {Category} = require("../model/Category")
 
 exports.fetchUserById = async (req,res) =>{
     const {id} = req.params;
@@ -10,9 +11,6 @@ exports.fetchUserById = async (req,res) =>{
       res.status(400).json(err)
     }
 }
-
-
-
 
 exports.updateUser = async (req,res)=>{
     const {id} = req.params;
